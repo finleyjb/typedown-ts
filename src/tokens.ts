@@ -1,6 +1,7 @@
 export enum TokenType {
   Text = "TEXT",
   Italic = "ITALIC",
+  Bold = "BOLD",
 }
 
 export interface Token {
@@ -22,4 +23,12 @@ export interface ItalicToken extends Token {
 
 export function italicToken(): ItalicToken {
   return { type: TokenType.Italic };
+}
+
+export interface BoldToken extends Token {
+  type: TokenType.Bold;
+}
+
+export function boldToken(): BoldToken {
+  return { type: TokenType.Bold };
 }
